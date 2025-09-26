@@ -1,23 +1,28 @@
-# Environment variables
+# Environment variables - CRITICAL: Never commit API keys
 .env
 *.env
+.env.*
 
 # Python cache
 __pycache__/
 *.py[cod]
 *$py.class
 
-# Virtual environment
+# Virtual environment - exclude completely
 .venv/
 venv/
 env/
 ENV/
+env.bak/
+venv.bak/
 
-# IDE
+# IDE files
 .vscode/
 .idea/
 *.swp
 *.swo
+.spyderproject
+.spyproject
 
 # OS generated files
 .DS_Store
@@ -28,7 +33,7 @@ ENV/
 ehthumbs.db
 Thumbs.db
 
-# Python
+# Python distribution / packaging
 *.pyc
 *.pyo
 *.pyd
@@ -49,6 +54,7 @@ wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # Unit test / coverage reports
 htmlcov/
@@ -67,3 +73,6 @@ coverage.xml
 
 # pyenv
 .python-version
+
+# Lock files that might contain sensitive info
+*.lock
